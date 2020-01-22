@@ -7,4 +7,5 @@ RUN wget -O terraform.zip https://releases.hashicorp.com/terraform/${TERRAFORM_V
   unzip terraform.zip -d /usr/local/bin && \
   rm -f terraform.zip
 
-ENTRYPOINT ["/bin/bash"]
+ENTRYPOINT ["docker-entrypoint.sh"]
+CMD ["node"]
